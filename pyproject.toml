@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "polycommons"
+version = "0.1.0"
+description = "Agent-based modeling of coupled socio-ecological common-pool resource dilemmas and polycentric governance"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Vibbudu", email = "vibbuduprod@gmail.com"}
+]
+keywords = [
+    "agent-based-modeling",
+    "evolutionary-game-theory",
+    "common-pool-resources",
+    "polycentric-governance",
+    "complex-networks",
+    "socio-ecological-systems",
+    "adaptive-dynamics"
+]
+dependencies = [
+    "numpy>=1.26.0",
+    "scipy>=1.11.0",
+    "networkx>=3.1",
+    "matplotlib>=3.8.0",
+    "pandas>=2.1.0",
+    "seaborn>=0.13.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["polycommons*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+pythonpath = ["."]
